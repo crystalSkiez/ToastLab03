@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="150"
+        android:background="@color/black"
+        android:paddingTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/topleftview"
+        android:text="@string/top_left"
+        android:textSize="20sp"
+        android:padding="30dp"
+        android:layout_margin="30dp"
+        android:textColor="@color/white"
+        android:background='@drawable/border_for_elements'
+        android:onClick="sharedListener"
+        app:layout_constraintBottom_toTopOf="@id/bottomleftview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/toprightview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toprightview"
+        android:text="@string/top_right"
+        android:textSize="20sp"
+        android:padding="30dp"
+        android:layout_margin="30dp"
+        android:textColor="@color/white"
+        android:background='@drawable/border_for_elements'
+        android:onClick="sharedListener"
+        app:layout_constraintBottom_toTopOf="@id/bottomrightview"
+        app:layout_constraintLeft_toRightOf="@id/topleftview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomrightview"
+        android:text="@string/bottom_right"
+        android:textColor="@color/white"
+        android:background='@drawable/border_for_elements'
+        android:textSize="20sp"
+        android:padding="30dp"
+        android:layout_margin="30dp"
+        android:onClick="sharedListener"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/bottomleftview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toprightview" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomleftview"
+        android:text="@string/bottom_left"
+        android:textColor="@color/white"
+        android:background='@drawable/border_for_elements'
+        android:textSize="20sp"
+        android:padding="30dp"
+        android:layout_margin="30dp"
+        android:onClick="sharedListener"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bottomrightview"
+        app:layout_constraintTop_toBottomOf="@id/topleftview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

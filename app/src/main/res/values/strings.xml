@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ToastLab03</string>
+    <string name="top_left">top left</string>
+    <string name="top_right">top right</string>
+    <string name="bottom_right">bottom right</string>
+    <string name="bottom_left">bottom left</string>
+</resources>
